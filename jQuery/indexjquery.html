@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('input').focus(function (){
+                $(this).css("background-color", "yellow");
+            });
+            $('input').blur()(function (){
+               $(this).css("background-color", "green")
+            });
+        });
+        // jQuery hide and show method
+        $(document).ready(function (){
+            $('#hide').click(function (){
+                $('p').hide();
+            });
+            $('#show').click(function (){
+                $('p').show();
+            });
+        });
+        $(document).ready(function (){
+            $('#toggle button').click(function (){
+                $('#toggle').toggle();
+            });
+        });
+        // $(document).ready(function(){
+        //     $('#fadeIn').click(function (){
+        //         $("#div1").fadeIn();
+        //         $('#div2').fadeIn('slow');
+        //         $('#div3').fadeIn(3000);
+        //     });
+        // });
+        $(document).ready(function(){
+            $('#fadeOut').click(function (){
+                $("#div1").fadeOut();
+                $('#div2').fadeOut('slow');
+                $('#div3').fadeOut(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email"><br><br>
+
+<p>If you click on the hide button, i will disappear, and if you click on the show button i will appear again</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<br>
+<br>
+<p id="toggle"> This is a paragraph with little content</p>
+<button id="toggle button">Toggle between hiding and showing the paragraph</button>
+<br>
+<br>
+<button id="fadeOut">Click to fade the boxes</button>
+<br><br>
+<div id="div1" style="width: 80px; height: 80px; background-color: red;"></div>
+<br>
+<div id="div2" style="width: 80px; height: 80px; background-color: green;"></div>
+<br>
+<div id="div3" style="width: 80px; height: 80px; background-color: blue;"></div>
+
+
+
+
+
+</body>
+</html>

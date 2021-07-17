@@ -1,0 +1,34 @@
+<p id="today"></p>
+
+<script>
+    let fact = "";
+    while (new Date().getDay() === 5){
+        fact = "Don't forget to recite Kahf";
+    }
+    document.getElementById('today').innerHTML = fact;
+</script>
+
+<p id="demo"></p>
+<script>
+    let i;
+    let text = ""
+    for (i = 0; i < 10; i++){
+        if (i === 3){continue;}
+        text += i + "<br>";
+    }
+    document.getElementById("demo").innerHTML= text;
+</script>
+
+<p id="label"></p>
+<script>
+    let cars = ['Honda', 'Lexus', 'Toyota', 'Benz', 'Acura'];
+    let text = "";
+    list: {
+        text += cars[0] + "<br>";
+        text += cars[1] + "<br>";
+        break list;
+        text += cars[2] + "<br>";
+        text += cars[3] + "<br>";
+    }
+    document.getElementById("label").innerHTML= text;
+</script>

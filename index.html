@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+<p id='demo2'> </p>
+<p id='demo3'> </p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button><br>
+<button onclick="document.getElementById('myimage').src='downloadon.gif'">Turn on the light.</button>
+<img id="myimage" src="download.png" style="width: auto;">
+<button onclick="document.getElementById('myimage').src='download.png'">Turn off the light</button>
+<p id='hide'>Javascript can hide HTML content</p>
+<button onclick="document.getElementById('hide').style.display='none'">Click me to hide</button>
+<button onclick="document.getElementById('hide').style.display='initial'">Click me to see</button>
+<script> var carName, personName, age;
+    carName = 'Toyota';
+    personName = 'Abdulmalik';
+    age = 23; 
+    document.getElementById('demo2','demo3').innerHTML= carName, personName; 
+    document.getElementById('demo2').innerHTML= personName;
+    document.getElementById('demo2').innerHTML= age;
+</script>
+
+<p id="date"></p>
+<button onclick="document.getElementById('date').innerHTML=Date()">The time is: </button>
+
+<script>
+    // Javascript Events
+    function displaydate(){
+        document.getElementById("event").innerHTML=Date();
+    }
+</script>
+<button onclick="displaydate()">The time is:</button>
+<p id="event"></p>
+
+<p id="string"></p>
+<script>
+    // Javascript Strings.
+    var txt;
+    txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var sln = txt.length;
+    document.getElementById('string').innerHTML=sln;
+</script>
+
+<p id="findstring"></p>
+<p id="laststring"></p>
+<script>
+    // Finding a string in a string
+    var str;
+    str = "Please locate where 'locate' occurs!";
+    var pos;
+    pos = str.indexOf('locate');
+    poslast = str.lastIndexOf('locate');
+    document.getElementById('findstring').innerHTML = pos;
+    document.getElementById('laststring').innerHTML = poslast;
+</script>
+
+<p id="slice"></p>
+<script>
+    // String Slicing.
+    var str;
+    str = "Apple, Banana, Kiwi";
+    var res;
+    res = str.slice(7, 13);
+    result = str. slice(7);
+    substr = str.substr(7, 4);
+
+    document.getElementById('slice').innerHTML = res;
+    document.getElementById('slice').innerHTML = result;
+    document.getElementById('slice').innerHTML = substr;
+</script>
+<p id="concat"></p>
+<script>
+    // Concat Method
+    var text1;
+    var text2;
+    var text3;
+    text1 = "Hello";
+    text2 = "World";
+    text3 = text2.concat(" ", text1);
+    document.getElementById('concat').innerHTML = text3;
+
+</script>
+
+<p id="tostring"></p>
+<script>
+    // Number methods
+    // tostring method
+    var x, y;
+    x = 12345;
+    y = 567;
+    document.getElementById('tostring').innerHTML= x.toString();
+    // toexponential function
+    document.getElementById('tostring').innerHTML = y.toExponential(2);
+</script>
+
+<script>
+    // Arrays
+    // Creating an array
+    var cars;
+    cars = ['toyota', 'Benz', 'Lexus', 'Honda', 'Acura']
+</script>
+
+
+<h1>The span element</h1>
+
+<p onload="myFunction()">My mother has <span id="change"  onload="myFunction()" style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+<script>
+    function myFunction() {
+        document.getElementById('change').innerHTML = 'Yellow';
+        alert("the page is loaded");
+    }
+</script>
+
+<p id="arrayLen"></p>
+<script>
+    // Javascript Array
+    var cars;
+    cars = ["Toyota", "Lexus", "Benz", "Honda", "Acura", "Ford"];
+    //Array Method
+    x = cars.length;
+    document.getElementById("arrayLen").innerHTML= x;
+
+
+</script>
+
+<p id="loop"></p>
+<script>
+    // Looping through an array
+    var fruits, text, fLen, i;
+    fruits = ["Apple", "Banana", "Cherry", "Oranges", "Mangoes", "Pear"];
+    fLen = fruits.length;
+
+    texts = ""
+    for (i = 0; i < fLen; i++){
+        texts += "<li>" + fruits[i] + "</li>";
+    }
+    document.getElementById('loop').innerHTML = texts;
+</script>
+
+
+<button onclick="this.style.visibility='hidden'">Click me</button>
+
+<p id="arrPop"></p>
+<p id="arrPop2"></p>
+<p id="arrPush"></p>\
+<p id="arrShift"></p>
+<p id="arrUnshift"></p>
+<script>
+    // Array method
+    // Popping and pushing in array
+
+    var array
+    array = ['Abdulmalik', 'Adebayo', 'Adeola', 'Abdurrahman', 'Abdullah'];
+    arrPop = array.pop();
+    // array push
+    arrPush = array.push('Zainab');
+    // Array shift
+    arrShift = array.shift();
+    // Array unshift
+    arrUnshift = array.unshift('Ummukulthum');
+    document.getElementById('arrUnshift').innerHTML=arrUnshift;
+    document.getElementById('arrShift').innerHTML= arrShift;
+    document.getElementById('arrPop').innerHTML= arrPop;
+    document.getElementById('arrPop2').innerHTML= array;
+    document.getElementById('arrPush').innerHTML=arrPush;
+</script>
+<p id="demoIf"></p>
+
+<script>
+    if (new Date().getHours() < 18){
+        document.getElementById('demoIf').innerHTML = "Good day";
+    };
+</script>
+<p id="switch"></p>
+<script>
+    // Switch condition
+    let day;
+    switch (new Date().getDay()){
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    };
+    document.getElementById('switch').innerHTML = "Today is " + day;
+
+
+</script>
+
+
+<!--<p id="for"></p>-->
+<!--<script>-->
+<!--    let cars = ["BMW", "Volvo", "Mini"];-->
+<!--    let forof = "";-->
+<!--    for (let m of cars) {-->
+<!--        forof += m + "<br>";-->
+<!--    }-->
+<!--    document.getElementById('for').innerHTML = forof;-->
+<!--</script>-->
+
+<p id="while"></p>
+<script>
+    let g = 0;
+    let h = "";
+    // While Loop
+    while (g < 10){
+        h += "<br>The number is " + g
+        g++;
+    }document.getElementById("while").innerHTML = h;
+
+</script>
+
+<p id="today"></p>
+
+<script>
+    let fact = "";
+    while (new Date().getDay() === 5){
+        fact = "Don't forget to recite Kahf";
+    }
+    document.getElementById('today').innerHTML = fact;
+</script>
+
+
+
+
+</body>
+</html>
