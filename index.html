@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-<h2>What Can JavaScript Do?</h2>
+<!-- <h2>What Can JavaScript Do?</h2>
 
 <p id="demo">JavaScript can change HTML content.</p>
 <p id='demo2'> </p>
@@ -123,128 +124,134 @@
 <script>
     // Javascript Array
     var cars;
-    cars = ["Toyota", "Lexus", "Benz", "Honda", "Acura", "Ford"];
+    cars = ["Toyota", "Lexus", "Benz", "Honda", "Acura", "Ford"]; -->
     //Array Method
-    x = cars.length;
-    document.getElementById("arrayLen").innerHTML= x;
+//     x = cars.length;
+//     document.getElementById("arrayLen").innerHTML= x;
 
 
-</script>
+// </script>
 
-<p id="loop"></p>
-<script>
-    // Looping through an array
-    var fruits, text, fLen, i;
-    fruits = ["Apple", "Banana", "Cherry", "Oranges", "Mangoes", "Pear"];
-    fLen = fruits.length;
+// <p id="loop"></p>
+// <script>
+//     // Looping through an array
+//     var fruits, text, fLen, i;
+//     fruits = ["Apple", "Banana", "Cherry", "Oranges", "Mangoes", "Pear"];
+//     fLen = fruits.length;
 
-    texts = ""
-    for (i = 0; i < fLen; i++){
-        texts += "<li>" + fruits[i] + "</li>";
-    }
-    document.getElementById('loop').innerHTML = texts;
-</script>
-
-
-<button onclick="this.style.visibility='hidden'">Click me</button>
-
-<p id="arrPop"></p>
-<p id="arrPop2"></p>
-<p id="arrPush"></p>\
-<p id="arrShift"></p>
-<p id="arrUnshift"></p>
-<script>
-    // Array method
-    // Popping and pushing in array
-
-    var array
-    array = ['Abdulmalik', 'Adebayo', 'Adeola', 'Abdurrahman', 'Abdullah'];
-    arrPop = array.pop();
-    // array push
-    arrPush = array.push('Zainab');
-    // Array shift
-    arrShift = array.shift();
-    // Array unshift
-    arrUnshift = array.unshift('Ummukulthum');
-    document.getElementById('arrUnshift').innerHTML=arrUnshift;
-    document.getElementById('arrShift').innerHTML= arrShift;
-    document.getElementById('arrPop').innerHTML= arrPop;
-    document.getElementById('arrPop2').innerHTML= array;
-    document.getElementById('arrPush').innerHTML=arrPush;
-</script>
-<p id="demoIf"></p>
-
-<script>
-    if (new Date().getHours() < 18){
-        document.getElementById('demoIf').innerHTML = "Good day";
-    };
-</script>
-<p id="switch"></p>
-<script>
-    // Switch condition
-    let day;
-    switch (new Date().getDay()){
-        case 0:
-            day = "Sunday";
-            break;
-        case 1:
-            day = "Monday";
-            break;
-        case 2:
-            day = "Tuesday";
-            break;
-        case 3:
-            day = "Wednesday";
-            break;
-        case 4:
-            day = "Thursday";
-            break;
-        case 5:
-            day = "Friday";
-            break;
-        case 6:
-            day = "Saturday";
-    };
-    document.getElementById('switch').innerHTML = "Today is " + day;
+//     texts = ""
+//     for (i = 0; i < fLen; i++){
+//         texts += "<li>" + fruits[i] + "</li>";
+//     }
+//     document.getElementById('loop').innerHTML = texts;
+// </script>
 
 
-</script>
+// <button onclick="this.style.visibility='hidden'">Click me</button>
+
+// <p id="arrPop"></p>
+// <p id="arrPop2"></p>
+// <p id="arrPush"></p>\
+// <p id="arrShift"></p>
+// <p id="arrUnshift"></p>
+// <script>
+//     // Array method
+//     // Popping and pushing in array
+
+//     var array
+//     array = ['Abdulmalik', 'Adebayo', 'Adeola', 'Abdurrahman', 'Abdullah'];
+//     arrPop = array.pop();
+//     // array push
+//     arrPush = array.push('Zainab');
+//     // Array shift
+//     arrShift = array.shift();
+//     // Array unshift
+//     arrUnshift = array.unshift('Ummukulthum');
+//     document.getElementById('arrUnshift').innerHTML=arrUnshift;
+//     document.getElementById('arrShift').innerHTML= arrShift;
+//     document.getElementById('arrPop').innerHTML= arrPop;
+//     document.getElementById('arrPop2').innerHTML= array;
+//     document.getElementById('arrPush').innerHTML=arrPush;
+// </script>
+// <p id="demoIf"></p>
+
+// <script>
+//     if (new Date().getHours() < 18){
+//         document.getElementById('demoIf').innerHTML = "Good day";
+//     };
+// </script>
+// <p id="switch"></p>
+// <script>
+//     // Switch condition
+//     let day;
+//     switch (new Date().getDay()){
+//         case 0:
+//             day = "Sunday";
+//             break;
+//         case 1:
+//             day = "Monday";
+//             break;
+//         case 2:
+//             day = "Tuesday";
+//             break;
+//         case 3:
+//             day = "Wednesday";
+//             break;
+//         case 4:
+//             day = "Thursday";
+//             break;
+//         case 5:
+//             day = "Friday";
+//             break;
+//         case 6:
+//             day = "Saturday";
+//     };
+//     document.getElementById('switch').innerHTML = "Today is " + day;
 
 
-<!--<p id="for"></p>-->
-<!--<script>-->
-<!--    let cars = ["BMW", "Volvo", "Mini"];-->
-<!--    let forof = "";-->
-<!--    for (let m of cars) {-->
-<!--        forof += m + "<br>";-->
-<!--    }-->
-<!--    document.getElementById('for').innerHTML = forof;-->
-<!--</script>-->
-
-<p id="while"></p>
-<script>
-    let g = 0;
-    let h = "";
-    // While Loop
-    while (g < 10){
-        h += "<br>The number is " + g
-        g++;
-    }document.getElementById("while").innerHTML = h;
-
-</script>
-
-<p id="today"></p>
-
-<script>
-    let fact = "";
-    while (new Date().getDay() === 5){
-        fact = "Don't forget to recite Kahf";
-    }
-    document.getElementById('today').innerHTML = fact;
-</script>
+// </script>
 
 
+// <!--<p id="for"></p>-->
+// <!--<script>-->
+// <!--    let cars = ["BMW", "Volvo", "Mini"];-->
+// <!--    let forof = "";-->
+// <!--    for (let m of cars) {-->
+// <!--        forof += m + "<br>";-->
+// <!--    }-->
+// <!--    document.getElementById('for').innerHTML = forof;-->
+// <!--</script>-->
 
+// <p id="while"></p>
+// <script>
+//     let g = 0;
+//     let h = "";
+//     // While Loop
+//     while (g < 10){
+//         h += "<br>The number is " + g
+//         g++;
+//     }document.getElementById("while").innerHTML = h;
+
+// </script>
+
+// <p id="today"></p>
+
+// <script>
+//     let fact = "";
+//     while (new Date().getDay() === 5){
+//         fact = "Don't forget to recite Kahf";
+//     }
+//     document.getElementById('today').innerHTML = fact;
+// </script>
+<!-- 
+<p id="output"></p> -->
+
+
+<p>Please input a number between 5 and 10</p>
+
+<input id="value" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="message"></p>
 
 </body>
 </html>
