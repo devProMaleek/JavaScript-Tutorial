@@ -63,5 +63,7 @@ function myFunction() {
     }
   } catch (err) {
     message.innerHTML = err;
+  } finally {
+    document.getElementById("value").value = "";
   }
 }
