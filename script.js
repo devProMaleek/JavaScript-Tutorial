@@ -58,7 +58,7 @@
 //       throw "The value is greater than 10";
 //     }
 //     // If the value meet the condition.
-let output = document.getElementById('output');
+
 // //Create an object
 // const person = {
 //   firstName: "Adebayo",
@@ -109,20 +109,57 @@ let output = document.getElementById('output');
 
 // Class Methods
 
-class car {
-  constructor(name, year, model) {
-    this.name = name;
-    this.model = model;
-    this.year = year;
-  }
+// class car {
+//   constructor(name, year, model) {
+//     this.name = name;
+//     this.model = model;
+//     this.year = year;
+//   }
 
-  // Add a method i.e a function.
-  age() {
-    let date = new Date();
-    return date.getFullYear() - this.year;
-  }
-}
+//   // Add a method i.e a function.
+//   age() {
+//     let date = new Date();
+//     return date.getFullYear() - this.year;
+//   }
+// }
 
-let myCar = new car("Toyota", "2015", "Corolla");
+// let myCar = new car("Toyota", "2015", "Corolla");
 
-output.innerHTML = "My car age is " + myCar.age() + " year(s)";
+// output.innerHTML = "My car age is " + myCar.age() + " year(s)";
+
+// JavaScript Objects
+//Creating an Objects
+
+// declare global variable.
+const result = document.getElementById('results');
+const person = {firstName: "Abdulmalik", lastName: "Adebayo", age: 30, nickName: "devProMaleek", eyeCol0r: "black"};
+// console.log(result)
+ //,Output Results
+//  output.innerHTML = "My name is " + person.firstName + " " + person.lastName  + ". You can also call me " + person.nickName; 
+
+ // Add more property to an object.
+
+ person.level = 500;
+ person.department = "Electronic and computer Engineering";
+
+//  output.innerHTML = person;
+
+ // Javascript Objects are mutable.
+
+ const x = person;
+ x.age = 10; // This will change both x.age and person.age.
+
+ // Results
+result.innerHTML = person.age;
+
+// Displaying an Object
+
+const myArray = Object.values(person);
+
+result.innerHTML = myArray;
+
+// Using JSON Stringify
+
+let myString = JSON.stringify(person);
+
+result.innerHTML = myString;
