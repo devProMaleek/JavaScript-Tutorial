@@ -70,7 +70,6 @@
 //   }
 // }
 
-
 // // Display data from the object
 // output.innerHTML = person.fullName();
 
@@ -80,8 +79,6 @@
 // hello = () => {
 //   return "Hello World!"
 // }
-
-
 
 // if the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword.
 
@@ -100,7 +97,7 @@
 //     this.name = name;
 //     this.year = year;
 //     this.model = model;
-//   }  
+//   }
 // }
 
 // // Create an object
@@ -135,7 +132,7 @@
 // const person = {firstName: "Abdulmalik", lastName: "Adebayo", age: 30, nickName: "devProMaleek", eyeCol0r: "black"};
 // // console.log(result)
 //  //,Output Results
-// //  output.innerHTML = "My name is " + person.firstName + " " + person.lastName  + ". You can also call me " + person.nickName; 
+// //  output.innerHTML = "My name is " + person.firstName + " " + person.lastName  + ". You can also call me " + person.nickName;
 
 //  // Add more property to an object.
 
@@ -164,7 +161,6 @@
 
 // result.innerHTML = myString;
 
-
 // JavaScript Callbacks
 
 // Sequence Control on Functions
@@ -172,7 +168,7 @@
 // Suppose you want to do a calculation, and then display the result.
 // You could call a calculator function (myCalculator), save the result, and then call another function (myDisplayer) to display the result:
 
-const output = document.getElementById("output")
+const output = document.getElementById("output");
 // function myDisplayer(some) {
 //     output.innerHTML = some;
 // }
@@ -203,7 +199,7 @@ const output = document.getElementById("output")
 
 // function myFunction() {
 //     output.innerHTML = "I fallen in love with JavaScript."
-// } 
+// }
 
 // Waiting for Intervals.
 // setInterval(myFunction, 1000)
@@ -214,21 +210,133 @@ const output = document.getElementById("output")
 
 // Waiting for files
 
-function myDisplayer(some) {
-    output.innerHTML = some;
+// function myDisplayer(some) {
+//     output.innerHTML = some;
+// }
+
+// function getFile(myCallback) {
+//     let req = new XMLHttpRequest();
+//     req.open('GET', "mycar.html");
+//     req.onload = function() {
+//         if (req.status == 200) {
+//             myCallback(this.responseText);
+//         } else {
+//             myCallback("Error: " + req.status)
+//         }
+//      }
+//      req.send();
+// }
+
+// getFile(myDisplayer);
+
+// JavaScript Promise
+
+// Promise Syntax
+// let myPromise = new Promise(function(myResolve, myReject) {
+//     // "Producing Code" (May take some time)
+
+//     myResolve(); // when successful
+//     myReject(); //when error
+// });
+
+// // "Consuming Code" (Must wait for a fulfilled Promise)
+// myPromise.then(
+//     function(value) {/* code if successful */},
+//     function(error) {/* code if some error */}
+// );
+
+// Promise Example
+
+// function myDisplayer(some) {
+//     output.innerHTML = some;
+// }
+
+// let myPromise = new Promise(function(myResolve, myReject) {
+//     let x = 0;
+
+//     // Producing code
+//     if (x == 0) {
+//         myResolve("OK");
+
+//         myReject("Error");
+//     }
+// });
+
+// // Consuming Code
+
+// myPromise.then(
+//     value => {myDisplayer(value);},
+//     error => {myDisplayer(error);}
+// );
+
+// Waiting for a timeout (Promise Example)
+
+// const myPromise = new Promise(function(myResolve, myReject) {
+//     // Producing code.
+//     setTimeout(() => {myResolve("I have fallen in love with JavaScript");
+//     }, 3000);
+// });
+
+// myPromise.then(
+//     value => {output.innerHTML = value;}
+// )
+
+// Waiting for a file. (Promise Example)
+// function myDisplayer(some) {
+//     output.innerHTML = some;
+// }
+
+// const myPromise = new Promise(function (myResolve, myReject) {
+//   // Producing Code
+//   let req = new XMLHttpRequest();
+//   req.open("GET", "mycar.html");
+//   req.onload = function () {
+//     if (req.status == 200) {
+//       myResolve(req.response);
+//     } else {
+//       myReject("File not found");
+//     }
+//   };
+//   req.send();
+// });
+
+// myPromise.then(
+//     value => {myDisplayer(value);},
+//     error => {myDisplayer(error);}
+// )
+
+// JavaScript Async/Await
+
+// function myDisplayer(some) {
+//     output.innerHTML = some;
+// }
+
+// // Async : The keyword async before a function makes the function return a promise:
+// async function myFunction() {
+//     return "Hello";
+// }
+
+// myFunction().then(
+//     function(value) {myDisplayer(value);},
+//     function(error) {myDisplayer(error);}
+// );
+
+// Await: The keyword await before a function makes the function wait for a promise:
+// async function myDisplay() {
+//     let myPromise = new Promise(function(myResolve, myReject) {
+//         myResolve("I have fallen in love with Javascript.");
+//     });
+//     output.innerHTML = await myPromise;
+// }
+
+// myDisplay()
+
+// Waiting for a Timeout (Async/Await example)
+async function myDisplay() {
+    let myPromise = new Promise(function(myResolve, myReject) {
+        setTimeout(function() {myResolve("I love you");}, 3000)
+    });
+    output.innerHTML = await myPromise;
 }
 
-function getFile(myCallback) {
-    let req = new XMLHttpRequest();
-    req.open('GET', "mycar.html");
-    req.onload = function() {
-        if (req.status == 200) {
-            myCallback(this.responseText);
-        } else {
-            myCallback("Error: " + req.status)
-        }
-     }
-     req.send();
-}
-
-getFile(myDisplayer);
+myDisplay()
