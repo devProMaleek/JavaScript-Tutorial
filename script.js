@@ -168,7 +168,7 @@
 // Suppose you want to do a calculation, and then display the result.
 // You could call a calculator function (myCalculator), save the result, and then call another function (myDisplayer) to display the result:
 
-const output = document.getElementById("output");
+
 // function myDisplayer(some) {
 //     output.innerHTML = some;
 // }
@@ -332,11 +332,28 @@ const output = document.getElementById("output");
 // myDisplay()
 
 // Waiting for a Timeout (Async/Await example)
-async function myDisplay() {
-    let myPromise = new Promise(function(myResolve, myReject) {
-        setTimeout(function() {myResolve("I love you");}, 3000)
-    });
-    output.innerHTML = await myPromise;
+// async function myDisplay() {
+//     let myPromise = new Promise(function(myResolve, myReject) {
+//         setTimeout(function() {myResolve("I love you");}, 3000)
+//     });
+//     output.innerHTML = await myPromise;
+// }
+
+// myDisplay()
+
+// Javascript Class Getter/Setter
+
+const output = document.getElementById("output");
+class Car {
+    constructor(brand) {
+        this.carName = brand;
+    }
+
+    get cnam() { return this.carName}
+
+    set cnam(value) { this.carName = value}
 }
 
-myDisplay()
+let myCar = new Car("Ford");
+
+output.innerHTML = myCar.cnam; 
