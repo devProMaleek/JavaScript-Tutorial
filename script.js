@@ -343,17 +343,25 @@
 
 // Javascript Class Getter/Setter
 
-const output = document.getElementById("output");
-class Car {
-    constructor(brand) {
-        this.carName = brand;
-    }
+// const output = document.getElementById("output");
+// class Car {
+//     constructor(brand) {
+//         this.carName = brand;
+//     }
+//
+//     get cnam() { return this.carName}
+//
+//     set cnam(value) { this.carName = value}
+// }
+//
+// let myCar = new Car("Ford");
+//
+// output.innerHTML = myCar.cnam;
 
-    get cnam() { return this.carName}
-
-    set cnam(value) { this.carName = value}
-}
-
-let myCar = new Car("Ford");
-
-output.innerHTML = myCar.cnam; 
+// JavaScript Display Objects
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+output.innerHTML = person;
